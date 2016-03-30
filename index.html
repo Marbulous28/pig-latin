@@ -1,9 +1,25 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text">
+      <link href="css/my.css" rel="stylesheet" type="text">
+      <script src="js/jquery-1.12.2.js"></script>
       <script src="js/my.js"></script>
     </head>
     <body>
+      <div class="container">
+        <div class="jumbotron">
+          <h2>This website translates sentences into pig latin for you!</h2>
+          <h4>Type into the box below and hit submit!</h4>
+        </div>
+        <form id=pigLatinInput>
+          <label>Type Here:</label>
+          <input type="text" id="here">
+          <button class = "btn btn-success" type="submit">Submit</button>
+        </form>
+        <br>
+        <div id="poutput">
+        </div>
+      </div>
     </body>
   </html>
-  

@@ -1,0 +1,10 @@
+.jumbotron {
+  text-align: center;
+}
+
+#poutput{
+   width: 300px;
+   padding: 15px;
+   border: 1px solid black;
+   margin: 15px;
+}

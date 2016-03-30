@@ -1,5 +1,3 @@
-var newSentence = prompt("Enter a sentence you want translated into pig latin.");
-
 var pigLatin = function(sentence){
   //READS IN SENTENCE AND SPLITS INTO WORDS
   var words = [];
@@ -11,7 +9,7 @@ var pigLatin = function(sentence){
     var letters = [];
     var letters = word.split("");
       //IF FIRST LETTER IS A VOWEL, ADD "AY" TO THE END
-      if(letters[0] === "a" && letters[0] === "e" || letters[0] === "i" || letters[0] === "o" || letters[0] === "u"){
+      if(letters[0] === "a" || letters[0] === "e" || letters[0] === "i" || letters[0] === "o" || letters[0] === "u"){
         letters.push("ay");
         finalWord = letters.join("");
         finalList.push(finalWord);
@@ -36,7 +34,14 @@ var pigLatin = function(sentence){
         }
       }
   }
-  var output = finalList.join(" ");
-  alert(output);
+  return output = finalList.join(" ");
 }
-pigLatin(newSentence);
+
+$(document).ready(function() {
+  $('form#pigLatinInput').submit(function(event){
+    event.preventDefault();
+    var newSentence = $("#here").val();
+    var result = pigLatin(newSentence);
+    $('#poutput').text(result);
+  });
+});
